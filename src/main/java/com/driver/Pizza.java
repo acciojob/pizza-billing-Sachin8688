@@ -46,8 +46,14 @@ public class Pizza {
         StringBuilder billBuilder = new StringBuilder();
         billBuilder.append("Base Price Of The Pizza: ").append(this.price).append("\n");
 
-        for (Map.Entry<String, Integer> entry : addedComponents.entrySet()) {
-            billBuilder.append(entry.getKey()).append(" Added: ").append(entry.getValue()).append("\n");
+        if (addedComponents.containsKey("Extra Cheese")) {
+            billBuilder.append("Extra Cheese Added: ").append(addedComponents.get("Extra Cheese")).append("\n");
+        }
+        if (addedComponents.containsKey("Extra Toppings")) {
+            billBuilder.append("Extra Toppings Added: ").append(addedComponents.get("Extra Toppings")).append("\n");
+        }
+        if (addedComponents.containsKey("Paper Bag")) {
+            billBuilder.append("Paper Bag Added: ").append(addedComponents.get("Paper Bag")).append("\n");
         }
 
         billBuilder.append("Total Price: ").append(getPrice()).append("\n");
