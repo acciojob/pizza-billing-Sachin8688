@@ -44,19 +44,19 @@ public class Pizza {
 
     public String getBill() {
         StringBuilder billBuilder = new StringBuilder();
-        billBuilder.append("Base Price Of The Pizza: ").append(this.price).append("\n");
+        billBuilder.append("Base Price Of The Pizza: ").append(this.price).append(System.lineSeparator());
 
         if (addedComponents.containsKey("Extra Cheese")) {
-            billBuilder.append("Extra Cheese Added: ").append(addedComponents.get("Extra Cheese")).append("\n");
+            billBuilder.append("Extra Cheese Added: ").append(addedComponents.get("Extra Cheese")).append(System.lineSeparator());
         }
         if (addedComponents.containsKey("Extra Toppings")) {
-            billBuilder.append("Extra Toppings Added: ").append(addedComponents.get("Extra Toppings")).append("\n");
+            billBuilder.append("Extra Toppings Added: ").append(addedComponents.get("Extra Toppings")).append(System.lineSeparator());
         }
         if (addedComponents.containsKey("Paper Bag")) {
-            billBuilder.append("Paper Bag Added: ").append(addedComponents.get("Paper Bag")).append("\n");
+            billBuilder.append("Paper Bag Added: ").append(addedComponents.get("Paper Bag")).append(System.lineSeparator());
         }
 
-        billBuilder.append("Total Price: ").append(getPrice()).append("\n");
+        billBuilder.append("Total Price: ").append(getPrice()).append(System.lineSeparator());
         this.bill = billBuilder.toString();
         return this.bill;
     }
